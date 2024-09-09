@@ -4,7 +4,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     if (darkMode) {
@@ -17,13 +17,36 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <nav className="p-4 bg-white dark:bg-gray-800 shadow-md flex justify-between items-center">
-        <h1 className="text-xl font-bold">My Portfolio</h1>
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="px-4 py-2 bg-blue-500 dark:bg-yellow-500 text-white rounded"
+        <h1 className="text-xl font-bold">Pavel&apos;s YoYo</h1>
+        <label
+          htmlFor="toggle-switch"
+          className="flex items-center cursor-pointer"
         >
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
+          <div className="relative">
+            <input
+              id="toggle-switch"
+              type="checkbox"
+              checked={darkMode}
+              onChange={() => setDarkMode(!darkMode)}
+              className="sr-only"
+            />
+            <div className="block bg-gray-300 dark:bg-gray-700 w-20 h-10 rounded-full"></div>
+            <div
+              className={`dot absolute left-1 top-1 w-8 h-8 rounded-full transition-transform duration-300 ${
+                darkMode ? "translate-x-full" : ""
+              } flex justify-center items-center bg-black`}
+            >
+              {darkMode ? (
+                <span className="text-white text-lg">☀️</span> // Moon Icon
+              ) : (
+                <span className="text-yellow-400 text-lg">🌙</span> // Sun Icon
+              )}
+            </div>
+          </div>
+          <span className="ml-3 text-gray-800 dark:text-gray-200">
+            {darkMode ? "Dark" : "Light"}
+          </span>
+        </label>
       </nav>
 
       <main className="p-4">

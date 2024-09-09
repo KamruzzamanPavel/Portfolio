@@ -46,28 +46,29 @@
 // export default About;
 const About = () => {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white min-h-screen overflow-hidden transition-all duration-300">
+    <section className="relative flex flex-col md:flex-row items-center rounded justify-between bg-white dark:bg-black text-black dark:text-white h-80vh overflow-hidden transition-all duration-300">
       {/* Left Text Section */}
       <div className="px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl z-10">
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-          We work to make <br />
-          <span className="text-green-500">Your dreams</span> come true.
+          I don&apos;t code, I <br />
+          <span className="text-red-500">Ctrl+C</span> and
+          <span className="text-green-500"> Ctrl+V</span> from{" "}
+          <span className="text-blue-500">ChatGPT</span>.
         </h1>
         <p className="mt-4 md:mt-6 text-gray-600 dark:text-gray-400 text-base md:text-lg lg:text-xl">
-          Contact us for any photography or videography ideas that you have. We
-          have professionals with amazing skills to help you achieve it.
+          Contact me for any good for nothing ideas that you have.
         </p>
-        <button className="mt-6 md:mt-8 px-4 py-2 md:px-6 md:py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out">
-          Contact Us
+        <button className="mt-6 md:mt-8 px-4 py-2 md:px-6 md:py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded">
+          ! Contact Me
         </button>
       </div>
 
       {/* Right Image Section */}
-      <div className="w-full md:w-1/2 h-64 md:h-auto flex items-center justify-center p-4 md:p-10">
+      <div className="w-full md:w-1/2 h-64 md:h-auto flex items-center justify-center p-4 md:p-10 z-10">
         <img
           src="pro.jpg" // replace with the actual image URL
           alt="Cameraman"
-          className="object-cover w-full h-full max-w-full max-h-full rounded filter brightness-50 grayscale"
+          className=" object-cover w-full h-full max-w-full max-h-full rounded filter brightness-50 grayscale"
         />
       </div>
 

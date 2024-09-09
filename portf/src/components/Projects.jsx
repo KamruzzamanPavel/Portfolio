@@ -36,10 +36,38 @@ import ProjectCard from "./ProjectcCard";
 
 const Projects = () => {
   const projectData = [
-    { name: "Project 1", description: "This is project 1", link: "#" },
-    { name: "Project 2", description: "This is project 2", link: "#" },
-    { name: "Project 3", description: "This is project 3", link: "#" },
-    { name: "Project 4", description: "This is project 4", link: "#" },
+    {
+      name: "My Awesome Project",
+      description:
+        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
+      image: "pro2.png", // URL to the project image
+      liveDemo: "https://example.com/live-demo", // URL to the live demo
+      github: "https://github.com/username/repository", // URL to the GitHub repository
+    },
+    {
+      name: "My Awesome Project",
+      description:
+        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
+      image: "pro3.png", // URL to the project image
+      liveDemo: "https://example.com/live-demo", // URL to the live demo
+      github: "https://github.com/username/repository", // URL to the GitHub repository
+    },
+    {
+      name: "My Awesome Project",
+      description:
+        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
+      image: "pro4.png", // URL to the project image
+      liveDemo: "https://example.com/live-demo", // URL to the live demo
+      github: "https://github.com/username/repository", // URL to the GitHub repository
+    },
+    {
+      name: "My Awesome Project",
+      description:
+        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
+      image: "https://example.com/path/to/project-image.jpg", // URL to the project image
+      liveDemo: "https://example.com/live-demo", // URL to the live demo
+      github: "https://github.com/username/repository", // URL to the GitHub repository
+    },
     // Add more projects as needed
   ];
 
