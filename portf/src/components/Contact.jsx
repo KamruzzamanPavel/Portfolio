@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="my-12">
+    <section id="contacts" className="my-12">
       <h2 className="text-3xl font-bold">Contact Me</h2>
       <p className="mt-4 text-gray-700 dark:text-gray-300">
         You can reach me via email at:{" "}

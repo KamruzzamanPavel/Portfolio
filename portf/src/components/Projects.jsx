@@ -1,29 +1,4 @@
-// // import React from "react";
-// import ProjectCard from "./ProjectcCard";
-
-// const Projects = () => {
-//   const projectData = [
-//     { name: "Project 1", description: "This is project 1", link: "#" },
-//     { name: "Project 2", description: "This is project 2", link: "#" },
-//     { name: "Project 3", description: "This is project 3", link: "#" },
-//     { name: "Project 4", description: "This is project 4", link: "#" },
-//     // Add more projects as needed
-//   ];
-
-//   return (
-//     <section className="my-8">
-//       <h2 className="text-3xl font-bold mb-4">Projects</h2>
-//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-//         {projectData.map((project, index) => (
-//           <ProjectCard key={index} project={project} />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Projects;
-
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
@@ -35,68 +10,108 @@ import "swiper/css/navigation";
 import ProjectCard from "./ProjectcCard";
 
 const Projects = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   const projectData = [
     {
       name: "My Awesome Project",
-      description:
-        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
-      image: "pro2.png", // URL to the project image
-      liveDemo: "https://example.com/live-demo", // URL to the live demo
-      github: "https://github.com/username/repository", // URL to the GitHub repository
+      description: "A brief description of what my awesome project does. ",
+      image: "pro2.png", // URL to the project image (ensure correct path)
+      liveDemo: "https://example.com/live-demo",
+      github: "https://github.com/username/repository",
     },
     {
-      name: "My Awesome Project",
+      name: "My Awesome Project 2",
       description:
-        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
-      image: "pro3.png", // URL to the project image
-      liveDemo: "https://example.com/live-demo", // URL to the live demo
-      github: "https://github.com/username/repository", // URL to the GitHub repository
+        "A brief description of what my second awesome project does.",
+      image: "pro3.png",
+      liveDemo: "https://example.com/live-demo",
+      github: "https://github.com/username/repository",
     },
     {
-      name: "My Awesome Project",
+      name: "My Awesome Project 3",
       description:
-        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
-      image: "pro4.png", // URL to the project image
-      liveDemo: "https://example.com/live-demo", // URL to the live demo
-      github: "https://github.com/username/repository", // URL to the GitHub repository
+        "This project showcases some interesting features and a modern design.",
+      image: "pro4.png",
+      liveDemo: "https://example.com/live-demo",
+      github: "https://github.com/username/repository",
     },
     {
-      name: "My Awesome Project",
+      name: "My Awesome Project 4",
       description:
-        "A brief description of what my awesome project does. It showcases cool features and has a sleek design.",
-      image: "https://example.com/path/to/project-image.jpg", // URL to the project image
-      liveDemo: "https://example.com/live-demo", // URL to the live demo
-      github: "https://github.com/username/repository", // URL to the GitHub repository
+        "A unique project with a focus on design and user experience.",
+      image: "https://example.com/path/to/project-image.jpg",
+      liveDemo: "https://example.com/live-demo",
+      github: "https://github.com/username/repository",
     },
-    // Add more projects as needed
   ];
 
+  // Detect screen width on mount and resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 480);
+    };
+
+    // Check the window size on initial load
+    handleResize();
+
+    // Add event listener to track window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const shouldShowNavigation = projectData.length > 3;
+
   return (
-    <section className="my-8">
-      <h2 className="text-3xl font-bold mb-4">Projects</h2>
-      <Swiper
-        modules={[Pagination, Navigation]}
-        spaceBetween={30}
-        slidesPerView={3}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-          },
-          600: {
-            slidesPerView: 2,
-          },
-          480: {
-            slidesPerView: 1,
-          },
-        }}
-      >
-        {projectData.map((project, index) => (
-          <SwiperSlide key={index}>
-            <ProjectCard project={project} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <section
+      id="projects"
+      className="my-4 bg-white dark:bg-black rounded text-black dark:text-white py-12"
+    >
+      <h2 className="text-3xl font-bold mb-4 text-center">Projects</h2>
+
+      {/* Conditionally render Swiper or a simple list based on screen size */}
+      {!isMobile ? (
+        <Swiper
+          modules={[Pagination, shouldShowNavigation ? Navigation : null]}
+          spaceBetween={20}
+          slidesPerView={3}
+          pagination={{ clickable: true }}
+          navigation={shouldShowNavigation}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            500: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+          }}
+          className="px-4"
+        >
+          {projectData.map((project, index) => (
+            <SwiperSlide key={index}>
+              <ProjectCard project={project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <div className="grid grid-cols-1 gap-6 px-4">
+          {projectData.map((project, index) => (
+            <div key={index}>
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

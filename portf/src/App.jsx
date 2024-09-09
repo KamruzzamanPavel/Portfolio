@@ -1,22 +1,11 @@
-import { useState, useEffect } from "react";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-
+import NavBar from "./components/Navbar";
 const App = () => {
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      <nav className="p-4 bg-white dark:bg-gray-800 shadow-md flex justify-between items-center">
+      {/* <nav className="p-4 bg-white dark:bg-gray-800 shadow-md flex justify-between items-center">
         <h1 className="text-xl font-bold">Pavel&apos;s YoYo</h1>
         <label
           htmlFor="toggle-switch"
@@ -47,7 +36,8 @@ const App = () => {
             {darkMode ? "Dark" : "Light"}
           </span>
         </label>
-      </nav>
+      </nav> */}
+      <NavBar></NavBar>
 
       <main className="p-4">
         <About />
