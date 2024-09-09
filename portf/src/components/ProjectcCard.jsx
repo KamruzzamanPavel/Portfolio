@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg group transition-transform transform hover:-translate-y-2">
-      <img
-        src={project.image}
-        alt={project.name}
-        className="w-full h-48 object-cover"
-      />
+    <div className="bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg group border  border-gray-700">
+      <div className="relative p-4">
+        <img
+          src={project.image}
+          alt={project.name}
+          className="w-full h-48 rounded-md object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
+        />
+      </div>
       <div className="p-4">
         <h3 className="text-sm sm:text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
           {project.name}
