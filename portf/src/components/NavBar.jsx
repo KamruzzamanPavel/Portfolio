@@ -32,10 +32,16 @@ const NavBar = () => {
   return (
     <nav
       className={`sticky top-0 p-4 z-50 shadow-md flex justify-between items-center transition-all duration-300 ${
-        scrolling ? "bg-transparent" : "bg-white dark:bg-gray-800"
+        scrolling
+          ? "bg-black/30 border-b border-blue-400"
+          : "bg-white dark:bg-gray-800"
       }`}
     >
-      <h1 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+      <h1
+        className={`${
+          scrolling ? "text-green-400" : "text-gray-800 dark:text-gray-200"
+        } text-xl font-bold `}
+      >
         Pavel&apos;s YoYo
       </h1>
 

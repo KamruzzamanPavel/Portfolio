@@ -2,20 +2,25 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex flex-col md:flex-row items-center rounded justify-between bg-white dark:bg-black text-black dark:text-white h-80vh overflow-hidden transition-all duration-300"
+      className="relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-screen overflow-hidden transition-all duration-300"
     >
       {/* Left Text Section */}
       <div className="px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl z-10">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-          I don&apos;t code, I <br />
-          <span className="text-red-500">Ctrl+C</span> and
-          <span className="text-green-500"> Ctrl+V</span> from{" "}
-          <span className="text-blue-500">ChatGPT</span>.
+        <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight">
+          I don&apos;t code,
+          <br /> I{" "}
+          <span className="text-red-600 dark:text-red-500">Ctrl+C</span> and
+          <span className="text-green-400 dark:text-green-500">
+            {" "}
+            Ctrl+V
+          </span>{" "}
+          from <span className="text-blue-600 dark:text-blue-500">ChatGPT</span>
+          .
         </h1>
-        <p className="mt-4 md:mt-6 text-gray-600 dark:text-gray-400 text-base md:text-lg lg:text-xl">
+        <p className="mt-6 text-gray-600 dark:text-gray-400 text-lg">
           Contact me for any good for nothing ideas that you have.
         </p>
-        <button className="mt-6 md:mt-8 px-4 py-2 md:px-6 md:py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded">
+        <button className="mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded">
           ! Contact Me
         </button>
       </div>
@@ -25,7 +30,7 @@ const About = () => {
         <img
           src="pro.jpg" // replace with the actual image URL
           alt="Cameraman"
-          className=" object-cover w-full h-full max-w-full max-h-full rounded filter brightness-50 grayscale"
+          className="object-cover w-full h-full max-w-full max-h-full rounded filter brightness-50 grayscale"
         />
       </div>
 

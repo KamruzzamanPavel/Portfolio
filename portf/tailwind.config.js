@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       height: {
-        "80vh": "83vh", // Adds a h-80vh utility for 80% screen height
+        "80vh": "83vh",
+        "40vh": "40vh", // Adds a h-80vh utility for 80% screen height
       },
     },
   },
