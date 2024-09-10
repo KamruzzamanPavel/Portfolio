@@ -31,10 +31,8 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`sticky top-0 p-4 z-50 shadow-md flex justify-between items-center transition-all duration-300 ${
-        scrolling
-          ? "bg-black/30 border-b border-blue-400"
-          : "bg-white dark:bg-gray-800"
+      className={`sticky top-0  z-50 shadow-md flex justify-between items-center transition-all duration-300 ${
+        scrolling ? "bg-transpaernt  p-1" : "bg-white dark:bg-gray-800 p-2"
       }`}
     >
       <h1
@@ -64,8 +62,8 @@ const NavBar = () => {
         className={`${
           menuOpen ? "block" : "hidden"
         } lg:flex flex-col lg:flex-row absolute lg:relative top-16 left-0 lg:top-auto lg:left-auto w-full lg:w-auto lg:p-0 p-4 transition-all duration-300 ${
-          scrolling ? "bg-transparent" : "bg-white dark:bg-gray-800"
-        } ${menuOpen ? "bg-white dark:bg-gray-800" : ""}`}
+          scrolling ? " bg-transparent " : " bg-white dark:bg-gray-800"
+        } ${menuOpen ? " bg-white dark:bg-gray-800 " : ""}`}
       >
         <div className="flex font-semibold flex-col lg:flex-row lg:space-x-6 space-y-4 lg:space-y-0 items-center">
           <Link
@@ -91,7 +89,7 @@ const NavBar = () => {
             Projects
           </Link>
           <Link
-            to="skills"
+            to="skill"
             smooth={true}
             duration={500}
             className={`cursor-pointer ${
