@@ -67,7 +67,7 @@ const NavBar = () => {
       >
         <div className="flex font-semibold flex-col lg:flex-row lg:space-x-6 space-y-4 lg:space-y-0 items-center">
           <Link
-            to="about"
+            to="personal-info"
             smooth={true}
             duration={500}
             className={`cursor-pointer ${

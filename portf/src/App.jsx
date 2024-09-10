@@ -4,6 +4,7 @@ import Contact from "./components/Contact";
 import NavBar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
+import PersonalInfo from "./components/PersonalInfo";
 const App = () => {
   return (
     <div
@@ -14,6 +15,7 @@ const App = () => {
 
       <main className="p-4">
         <About />
+        <PersonalInfo />
         <Projects />
         <Skills />
         <Education />
