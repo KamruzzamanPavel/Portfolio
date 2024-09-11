@@ -22,7 +22,7 @@ const Projects = () => {
       name: "My Awesome Project 2",
       description:
         "A brief description of what my second awesome project does.",
-      image: "pro3.png",
+      image: "bb.png",
       liveDemo: "https://example.com/live-demo",
       github: "https://github.com/username/repository",
     },
@@ -38,7 +38,7 @@ const Projects = () => {
       name: "My Awesome Project 4",
       description:
         "A unique project with a focus on design and user experience.",
-      image: "https://example.com/path/to/project-image.jpg",
+      image: "bb2.png",
       liveDemo: "https://example.com/live-demo",
       github: "https://github.com/username/repository",
     },
