@@ -24,9 +24,11 @@ const PersonalInfo = () => {
           applications. I love working with modern technologies like React,
           Node.js, and more to bring ideas to life.
         </p>
-        <button className="mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded">
-          Learn More
-        </button>
+        <div className="flex flex-col md:flex-row">
+          <button className=" mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded">
+            Learn More
+          </button>
+        </div>
       </div>
     </section>
   );

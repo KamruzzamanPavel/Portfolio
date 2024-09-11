@@ -2,10 +2,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-screen-60 overflow-hidden transition-all duration-300"
+      className="relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-70vh md:h-[70%]  overflow-hidden transition-all duration-300"
     >
       {/* Left Text Section */}
-      <div className="relative z-10 px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl bg-white/80 dark:bg-black/80 md:bg-transparent">
+      <div className="relative z-10 px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl bg-white/80 dark:bg-black/80 md:bg-transparent h-full">
         <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight">
           I don&apos;t code,
           <br /> I{" "}
@@ -20,6 +20,11 @@ const About = () => {
         <p className="mt-6 text-gray-600 dark:text-gray-400 text-lg">
           Contact me for any good-for-nothing ideas that you have.
         </p>
+        <div className="flex flex-col md:flex-row mt-9  ">
+          <button className=" mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded">
+            Learn More
+          </button>
+        </div>
         {/* <button className="mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded"></button> */}
       </div>
 
@@ -28,13 +33,13 @@ const About = () => {
         <img
           src="pc.jpg" // Replace with your image URL
           alt="Pavel"
-          className="object-cover w-full h-full max-w-full max-h-full rounded brightness-50"
+          className="object-cover w-fit h-auto max-w-full max-h-full rounded brightness-50"
         />
       </div>
 
       {/* Background Image on Small Screens */}
       <div
-        className="absolute inset-0 md:hidden bg-cover bg-center"
+        className="absolute inset-0 md:hidden  bg-cover bg-center"
         style={{ backgroundImage: 'url("pc.jpg")' }}
       ></div>
     </section>
