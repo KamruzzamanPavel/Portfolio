@@ -9,7 +9,7 @@ const About = () => {
       {/* Left Text Section */}
       <div className="relative z-10 px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl bg-white/80 dark:bg-black/80 md:bg-transparent h-full flex flex-col justify-between">
         <div>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold leading-tight">
             I don&apos;t code,
             <br /> I{" "}
             <span className="text-red-600 dark:text-red-500">Ctrl+C</span> and
