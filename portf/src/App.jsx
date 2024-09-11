@@ -5,6 +5,7 @@ import NavBar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import PersonalInfo from "./components/PersonalInfo";
+import ScrollButton from "./ScrollButton";
 const App = () => {
   return (
     <div
@@ -20,6 +21,7 @@ const App = () => {
         <Skills />
         <Education />
         <Contact />
+        <ScrollButton />
       </main>
     </div>
   );
