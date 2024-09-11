@@ -27,9 +27,9 @@ const Skills = () => {
       id="skill"
       className="my-12 bg-white dark:bg-black text-black dark:text-white p-8"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-        <span className="text-red-600 dark:text-red-500">Skills</span> , Those
-        I&apos;ve Gained on the Way
+      <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
+        <span className="text-red-600 dark:text-red-500">Skills</span> ,
+        <span className="">Those I&apos;ve Gained on the Way</span>
       </h2>
 
       <div className="flex flex-wrap justify-center items-stretch gap-4">

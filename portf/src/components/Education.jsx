@@ -8,7 +8,10 @@ const Education = () => {
       className="my-12 bg-white dark:bg-black text-black dark:text-white py-8 px-4 sm:px-6 lg:px-8"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-        My <span className="text-green-600 dark:text-green-500">Education</span>
+        My{" "}
+        <span className="text-green-600 dark:text-green-500">Education </span>
+        <br />
+        <span className="text-sm">( i am Not a BUETian ) </span>
       </h2>
 
       <div className="flex flex-col items-center space-y-8">

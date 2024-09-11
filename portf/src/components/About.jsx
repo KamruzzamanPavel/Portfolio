@@ -1,31 +1,40 @@
+import { Link } from "react-scroll";
+
 const About = () => {
   return (
     <section
       id="about"
-      className=" relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-70vh md:h-[70%]  overflow-hidden transition-all duration-300"
+      className="relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-70vh md:h-[70%] overflow-hidden transition-all duration-300"
     >
       {/* Left Text Section */}
-      <div className="relative z-10 px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl bg-white/80 dark:bg-black/80 md:bg-transparent h-full">
-        <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight">
-          I don&apos;t code,
-          <br /> I{" "}
-          <span className="text-red-600 dark:text-red-500">Ctrl+C</span> and
-          <span className="text-green-400 dark:text-green-500">
-            {" "}
-            Ctrl+V
-          </span>{" "}
-          from <span className="text-blue-600 dark:text-blue-500">ChatGPT</span>
-          .
-        </h1>
-        <p className="mt-6 text-gray-600 dark:text-gray-400 text-lg">
-          Contact me for any good-for-nothing ideas that you have.
-        </p>
-        <div className="flex flex-col md:flex-row mt-9  ">
-          <button className=" mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded">
-            Learn More
-          </button>
+      <div className="relative z-10 px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl bg-white/80 dark:bg-black/80 md:bg-transparent h-full flex flex-col justify-between">
+        <div>
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-bold leading-tight">
+            I don&apos;t code,
+            <br /> I{" "}
+            <span className="text-red-600 dark:text-red-500">Ctrl+C</span> and
+            <span className="text-green-400 dark:text-green-500">
+              {" "}
+              Ctrl+V
+            </span>{" "}
+            from{" "}
+            <span className="text-blue-600 dark:text-blue-500">ChatGPT</span>.
+          </h1>
+          <p className="mt-4 text-gray-600 dark:text-gray-100 text-base md:text-lg">
+            Feel free contact me for any good-for-nothing ideas that you have.
+          </p>
         </div>
-        {/* <button className="mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded"></button> */}
+        <div className="mt-auto">
+          <Link
+            to="personal-info"
+            smooth={true}
+            offset={-70} // Adjust offset based on your header height
+            duration={500}
+            className="block mt-8 px-4 py-2 text-sm md:px-6 md:py-3 md:text-base border border-green-500 md:border-none text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out rounded text-center"
+          >
+            Learn More
+          </Link>
+        </div>
       </div>
 
       {/* Image Section - Visible on Larger Screens, Background on Phones */}
@@ -39,7 +48,7 @@ const About = () => {
 
       {/* Background Image on Small Screens */}
       <div
-        className="absolute inset-0 md:hidden  bg-cover bg-center"
+        className="absolute inset-0 md:hidden bg-cover bg-center"
         style={{ backgroundImage: 'url("pc.jpg")' }}
       ></div>
     </section>

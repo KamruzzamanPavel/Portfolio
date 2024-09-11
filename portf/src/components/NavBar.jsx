@@ -44,7 +44,7 @@ const NavBar = () => {
       </h1>
 
       {/* Hamburger Icon */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="text-gray-800 dark:text-gray-200"
