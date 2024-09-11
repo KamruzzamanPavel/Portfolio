@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-70vh md:h-[70%]  overflow-hidden transition-all duration-300"
+      className=" relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-70vh md:h-[70%]  overflow-hidden transition-all duration-300"
     >
       {/* Left Text Section */}
       <div className="relative z-10 px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl bg-white/80 dark:bg-black/80 md:bg-transparent h-full">
