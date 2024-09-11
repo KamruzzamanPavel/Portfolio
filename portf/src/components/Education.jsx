@@ -11,10 +11,9 @@ const Education = () => {
         My{" "}
         <span className="text-green-600 dark:text-green-500">Education </span>
         <br />
-        <span className="text-sm">( i am Not a BUETian ) </span>
       </h2>
 
-      <div className="flex flex-col items-center space-y-8">
+      <div className="flex flex-col items-center space-yt-8 ">
         {/* Islamic University */}
         <div className="w-full max-w-md bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
           <div className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 mb-4">
@@ -38,6 +37,9 @@ const Education = () => {
             4th Year Undergraduate Student
           </p>
         </div>
+        <span className="text-sm text-center mt-3">
+          i am Not a BUETian ri8 ?!{" "}
+        </span>
       </div>
     </section>
   );

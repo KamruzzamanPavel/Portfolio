@@ -110,17 +110,7 @@ const NavBar = () => {
           >
             Education
           </Link>
-          <Link
-            to="paperplanes"
-            smooth={true}
-            duration={500}
-            className={`cursor-pointer ${
-              scrolling ? "text-blue-500" : "text-gray-800 dark:text-gray-200"
-            } hover:text-green-500 dark:hover:text-green-400 transition-colors duration-300`}
-            onClick={() => setMenuOpen(false)}
-          >
-            PaperPlanes
-          </Link>
+
           <Link
             to="contacts"
             smooth={true}

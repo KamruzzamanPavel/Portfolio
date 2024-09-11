@@ -37,23 +37,14 @@ const Contact = () => {
             href="mailto:example@email.com"
             className="text-green-500 hover:underline"
           >
-            example@email.com
+            kakupavel@gmail.com
           </a>
         </p>
 
         {/* Social Media Links */}
         <div className="flex justify-center space-x-6 mt-8">
           <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out"
-          >
-            <i className="fab fa-linkedin fa-2x"></i>{" "}
-            {/* Font Awesome for icon */}
-          </a>
-          <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/Pavel.CSE.IU.Kushtia/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out"
@@ -61,7 +52,7 @@ const Contact = () => {
             <i className="fab fa-facebook fa-2x"></i>
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/mdkamruzzamnpavel/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out"
@@ -69,10 +60,6 @@ const Contact = () => {
             <i className="fab fa-instagram fa-2x"></i>
           </a>
         </div>
-
-        <button className="mt-8 px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black dark:hover:text-white transition duration-300 ease-in-out">
-          Send an Email
-        </button>
       </div>
     </section>
   );
