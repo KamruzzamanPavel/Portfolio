@@ -13,7 +13,7 @@ const PersonalInfo = () => {
       className="my-10 relative flex flex-col md:flex-row items-center justify-between bg-white dark:bg-black text-black dark:text-white h-screen-70 overflow-hidden transition-all duration-300"
     >
       {/* Left Image Section */}
-      <div className="w-full md:w-1/2 h-64 md:h-auto flex items-center justify-center p-4 md:p-10 z-10">
+      <div className=" w-full md:w-1/2 h-64 md:h-auto flex items-center justify-center p-4 md:p-10 z-10">
         <img
           src="pro.jpg" // replace with the actual image URL
           alt="Your Image"
@@ -22,7 +22,7 @@ const PersonalInfo = () => {
       </div>
 
       {/* Right Text Section */}
-      <div className="px-6 py-12 md:pl-24 lg:pl-32 max-w-md md:max-w-lg lg:max-w-xl z-10">
+      <div className=" px-6 py-12 md:pl-15 lg:pl-24 max-w-md md:max-w-lg lg:max-w-xl z-10">
         {!showMore && (
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight">
             Hello, I’m{" "}
