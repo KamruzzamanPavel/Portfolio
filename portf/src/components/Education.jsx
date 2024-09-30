@@ -30,7 +30,8 @@ const Education = () => {
           </div>
           <p className="text-gray-700 dark:text-gray-300 mb-2">
             <FaGraduationCap size={20} className="inline mr-2" />
-            B.Engg in Computer Science Engineering (CSE)
+            B.Engg in Computer Science Engineering (
+            <span className="text-green-500">CSE</span> )
           </p>
           <p className="text-gray-700 dark:text-gray-300">
             <MdSchool size={20} className="inline mr-2" />
@@ -38,7 +39,7 @@ const Education = () => {
           </p>
         </div>
         <span className="text-sm text-center mt-3">
-          i am Not a BUETian ri8 ?!{" "}
+          -{">"}and Not a BUETian{" "}
         </span>
       </div>
     </section>

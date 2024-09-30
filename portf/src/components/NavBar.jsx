@@ -122,39 +122,38 @@ const NavBar = () => {
           >
             Contacts
           </Link>
-        </div>
-
-        {/* Dark Mode Toggle */}
-        <div className="flex items-center mt-4 lg:mt-0 lg:ml-6">
-          <label
-            htmlFor="toggle-switch"
-            className="flex items-center cursor-pointer"
-          >
-            <div className="relative">
-              <input
-                id="toggle-switch"
-                type="checkbox"
-                checked={darkMode}
-                onChange={() => setDarkMode(!darkMode)}
-                className="sr-only"
-              />
-              <div className="block bg-gray-300 dark:bg-gray-700 w-20 h-10 rounded-full"></div>
-              <div
-                className={`dot absolute left-2 top-1 w-8 h-8 rounded-full transition-transform duration-300 ${
-                  darkMode ? "translate-x-full" : ""
-                } flex justify-center items-center bg-black`}
-              >
-                {darkMode ? (
-                  <span className="text-white text-lg">☀️</span>
-                ) : (
-                  <span className="text-yellow-400 text-lg">🌙</span>
-                )}
+          {/* Dark Mode Toggle */}
+          <div className="flex items-center mt-4 lg:mt-0 lg:ml-6">
+            <label
+              htmlFor="toggle-switch"
+              className="flex items-center cursor-pointer"
+            >
+              <div className="relative">
+                <input
+                  id="toggle-switch"
+                  type="checkbox"
+                  checked={darkMode}
+                  onChange={() => setDarkMode(!darkMode)}
+                  className="sr-only"
+                />
+                <div className="block bg-gray-300 dark:bg-gray-700 w-20 h-10 rounded-full"></div>
+                <div
+                  className={`dot absolute left-2 top-1 w-8 h-8 rounded-full transition-transform duration-300 ${
+                    darkMode ? "translate-x-full" : ""
+                  } flex justify-center items-center bg-black`}
+                >
+                  {darkMode ? (
+                    <span className="text-white text-lg">☀️</span>
+                  ) : (
+                    <span className="text-yellow-400 text-lg">🌙</span>
+                  )}
+                </div>
               </div>
-            </div>
-            <span className="ml-3 text-gray-800 dark:text-gray-200">
-              {darkMode ? "" : ""}
-            </span>
-          </label>
+              <span className="ml-3 text-gray-800 dark:text-gray-200">
+                {darkMode ? "" : ""}
+              </span>
+            </label>
+          </div>
         </div>
       </div>
     </nav>
